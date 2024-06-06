@@ -3,10 +3,10 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 
-    // for kotlin
-//    id 'org.jetbrains.kotlin.jvm' version '1.7.22'
-//    id 'org.jetbrains.kotlin.plugin.spring' version '1.7.22'
-//    id "org.jetbrains.kotlin.plugin.jpa" version '1.7.22'
+//     for kotlin
+    id 'org.jetbrains.kotlin.jvm' version '1.7.22'
+    id 'org.jetbrains.kotlin.plugin.spring' version '1.7.22'
+    id "org.jetbrains.kotlin.plugin.jpa" version '1.7.22'
 }
 
 repositories {
@@ -24,9 +24,9 @@ subprojects {
         plugin 'io.spring.dependency-management'
         plugin 'java'
 
-//        plugin 'org.jetbrains.kotlin.jvm'
-//        plugin 'org.jetbrains.kotlin.plugin.spring'
-//        plugin 'org.jetbrains.kotlin.plugin.jpa'
+        plugin 'org.jetbrains.kotlin.jvm'
+        plugin 'org.jetbrains.kotlin.plugin.spring'
+        plugin 'org.jetbrains.kotlin.plugin.jpa'
     }
 
     group = 'io.reflectoring.buckpal'
@@ -77,19 +77,19 @@ subprojects {
         }
     }
 
-//    // for kotlin
-//    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
-//        kotlinOptions {
-//            jvmTarget = JavaVersion.VERSION_17
-//            freeCompilerArgs = ["-Xjsr305=strict"]
-//        }
-//    }
-//
-//    // for kotlin
-//    allOpen {
-//        annotation("javax.persistence.Entity")
-//        annotation("javax.persistence.MappedSuperclass")
-//        annotation("javax.persistence.Embeddable")
-//    }
+    // for kotlin
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
+        kotlinOptions {
+            jvmTarget = JavaVersion.VERSION_17
+            freeCompilerArgs = ["-Xjsr305=strict"]
+        }
+    }
+
+    // for kotlin
+    allOpen {
+        annotation("javax.persistence.Entity")
+        annotation("javax.persistence.MappedSuperclass")
+        annotation("javax.persistence.Embeddable")
+    }
 
 }

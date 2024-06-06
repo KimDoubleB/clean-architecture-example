@@ -3,7 +3,6 @@ package io.reflectoring.buckpal.adapter.out.persistence;
 import io.reflectoring.buckpal.application.domain.model.Account;
 import io.reflectoring.buckpal.application.domain.model.Account.AccountId;
 import io.reflectoring.buckpal.application.domain.model.Activity;
-import io.reflectoring.buckpal.application.domain.service.GetAccountBalanceService;
 import io.reflectoring.buckpal.application.port.out.LoadAccountPort;
 import io.reflectoring.buckpal.application.port.out.UpdateAccountStatePort;
 import io.reflectoring.buckpal.common.PersistenceAdapter;
@@ -22,8 +21,6 @@ class AccountPersistenceAdapter implements
 	private final SpringDataAccountRepository accountRepository;
 	private final ActivityRepository activityRepository;
 	private final AccountMapper accountMapper;
-
-	private final GetAccountBalanceService getAccountBalanceService;
 
 	@Override
 	public Account loadAccount(
