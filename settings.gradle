@@ -1,0 +1,8 @@
+rootProject.name = 'buckpal'
+
+include 'bootstrap'
+include 'adapter.in'
+include 'adapter.out'
+include 'application'
+include 'common'
+
